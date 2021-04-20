@@ -1,13 +1,50 @@
 <template>
-$END$
+  <v-form v-model="valid">
+    <v-text-field v-model="userInfo.name"
+                  label="Name"
+                  v-if="hasName"
+                  :rules="[required('name')]">
+    </v-text-field>
+    <v-text-field v-model="userInfo.email"
+                  label="Email">
+    </v-text-field>
+    <!--:rules="[required('email'), emailFormat()]"-->
+
+
+    <v-text-field v-model="userInfo.password"
+                  label="Password"
+                  :type="showPassword ? 'text' : 'password'"
+                  :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+                  @click:append="showPassword = !showPassword"
+                  counter=true>
+    </v-text-field>
+    <!--:rules="[required('password'), minLength('password', 8)]"-->
+
+
+    <v-btn @click="submitForm(userInfo)" :disabled="!valid">{{ buttonText }}></v-btn>
+  </v-form>
 </template>
 
 <script>
+
 export default {
-name: "UserAuthForm"
+  name: "UserAuthForm",
+  data() {
+    return {
+      valid: false,
+      showPassword: false,
+      hasName: false,
+      userInfo: {
+        email: '',
+        password: ''
+      }
+    }
+  },
+  props: ["submitForm", "buttonText", "hasName"]
 }
+
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>
