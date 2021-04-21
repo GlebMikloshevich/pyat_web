@@ -11,13 +11,14 @@ $family-primary: $family-sans-serif;
 $widescreen-enabled: false;
 
 // Set your colors
-
 $primary: #659DBD;
 $primary-invert: #FFFFFF;
 $info: #3498db;
 $info-invert: #FFFFFF;
 $blue-button: #1E90FF;
 $blue-button-invert: #FFFFFF;
+
+
 //$twitter: #16132E;
 //$twitter-invert: #EFEFEF;
 
@@ -51,8 +52,24 @@ $colors: (
 //$navbar-padding-vertical: 25px;
 
 html {
+  height: 100vh;
+  overflow: hidden !important;
 }
 
+body {
+  height: 100vh;
+}
+
+#__nuxt {
+  height: 100vh;
+}
+
+#__layout {
+  height: 100%;
+}
+.fullheight {
+  height: 100%;
+}
 .navbar {
   &.is-transparent {
     background: transparent;
@@ -63,6 +80,19 @@ html {
     background: transparent;
   }
 }
+.sidebar-config {
+  min-height: 100%;
+  overflow: hidden;
+  box-shadow: 5px 0px 13px 3px rgba(10, 10, 10, 0.1);
+}
+
+//.menu-list {
+//  padding: 0 8px;
+//}
+.u-menu-item{
+  padding: 2px 12px;
+}
+$sidebar-box-shadow: 0 0 0 0 black;
 
 // Import Bulma and Buefy styles
 @import "~bulma";

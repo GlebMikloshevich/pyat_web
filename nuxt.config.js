@@ -36,8 +36,6 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
     '@nuxtjs/toast'
-
-
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

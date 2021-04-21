@@ -22,6 +22,8 @@
     "vee-validate": "^3.4.5"
   },
   "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-plugin-vue": "^7.9.0",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.1",
     "vue-loader": "^15.5.1",
