@@ -7,25 +7,26 @@
 
       <section class="sidebar-config sidebar-layout">
         <b-sidebar
-            class=""
-            position="static"
             :expand-on-hover=true
-            mobile="reduce"
             :fullheight=true
-            type="is-white"
+            class=""
+            mobile="reduce"
             open
+            position="static"
+            type="is-white"
         >
 
           <ul class="menu-list">
-            <li class="u-menu-item"
-                v-for="(item, key) of items"
+            <li v-for="(item, key) of items"
                 :key="key"
+                class="u-menu-item"
             >
               <nuxt-link
                   :to="item.to"
                   exact-active-class="is-active"
               >
-                <b-icon :icon="item.icon" /> {{ item.title }}
+                <b-icon :icon="item.icon"/>
+                {{ item.title }}
               </nuxt-link>
             </li>
           </ul>
@@ -34,7 +35,7 @@
       </section>
 
       <div class="p-1   column is-10 main-content" style="position:static; overflow: scroll">
-        <nuxt />
+        <nuxt/>
 
       </div>
     </container>
@@ -42,25 +43,25 @@
 </template>
 
 <script>
-import VueHeader from "@/components/VueHeader";
+
 export default {
-  data () {
+  data() {
     return {
       items: [
         {
           title: 'Home',
           icon: 'home',
-          to: { name: 'index' }
+          to: {name: 'index'}
         },
         {
           title: 'Inspire',
           icon: 'lightbulb',
-          to: { name: 'inspire' }
+          to: {name: 'inspire'}
         },
         {
           title: 'Test',
           icon: 'account',
-          to: { name: 'test' }
+          to: {name: 'test'}
         }
       ]
     }

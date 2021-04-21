@@ -13,30 +13,30 @@
           <b-field label="E-mail *"
                    label-position="on-border">
             <b-input
-                type="email"
+                v-model="register_user.email"
                 min="8"
                 required
-                v-model="register_user.email">
+                type="email">
             </b-input>
           </b-field>
 
           <b-field label="Пароль *"
                    label-position="on-border">
             <b-input
-                type="password"
-                password-reveal
+                v-model="register_user.password"
                 min="8"
+                password-reveal
                 required
-                v-model="register_user.password">>
+                type="password">>
             </b-input>
           </b-field>
 
           <b-field label="Фамилия *"
                    label-position="on-border">
             <b-input
+                v-model="register_user.second_name"
                 min="1"
-                required
-                v-model="register_user.second_name">
+                required>
               pattern="[A-Za-zА-Яа-яЁё]*"
               validation-message="Только русские и английские буквы">
             </b-input>
@@ -45,9 +45,9 @@
           <b-field label="Имя *"
                    label-position="on-border">
             <b-input
+                v-model="register_user.first_name"
                 min="2"
-                required
-                v-model="register_user.first_name">
+                required>
               pattern="[A-Za-zА-Яа-яЁё]*"
               validation-message="Только русские и английские буквы">
             </b-input>
@@ -56,9 +56,9 @@
           <b-field label="Отчество"
                    label-position="on-border">
             <b-input
+                v-model="register_user.patronymic"
                 min="2"
-                required
-                v-model="register_user.patronymic">
+                required>
               pattern="[A-Za-zА-Яа-яЁё]*"
               validation-message="Только русские и английские буквы">
             </b-input>
@@ -66,13 +66,11 @@
           </b-field>
 
 
-
-
           <b-button
               class="column is-medium is-fullwidth"
-              type="is-info"
               size="is-default"
               text
+              type="is-info"
           >
             Зарегестрироваться
           </b-button>
@@ -90,7 +88,7 @@ export default {
   data() {
     return {
       register_user: {
-        email : '',
+        email: '',
         password: '',
         first_name: '',
         patronymic: '',
@@ -99,7 +97,7 @@ export default {
     }
   },
   methods: {
-    async registerUser(register_user){
+    async registerUser(register_user) {
       await this.$axios.post('', register_user)
 
     }
