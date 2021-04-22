@@ -1,6 +1,6 @@
 <template>
   <div>
-    <VueHeader></VueHeader>
+    <VueHeader />
 
     <section class="main-content columns">
       <aside class="column is-2 section">
@@ -9,12 +9,12 @@
         </p>
         <ul class="menu-list">
           <li
-              v-for="(item, key) of items"
-              :key="key"
+            v-for="(item, key) of items"
+            :key="key"
           >
             <nuxt-link
-                :to="item.to"
-                exact-active-class="is-active"
+              :to="item.to"
+              exact-active-class="is-active"
             >
               <b-icon :icon="item.icon" /> {{ item.title }}
             </nuxt-link>
@@ -30,28 +30,29 @@
 </template>
 
 <script>
-import VueHeader from "@/components/VueHeader";
+import VueHeader from '@/components/VueHeader';
+
 export default {
-  data () {
+  data() {
     return {
       items: [
         {
           title: 'Home',
           icon: 'home',
-          to: { name: 'index' }
+          to: { name: 'index' },
         },
         {
           title: 'Inspire',
           icon: 'lightbulb',
-          to: { name: 'inspire' }
+          to: { name: 'inspire' },
         },
         {
           title: 'Test',
           icon: 'account',
-          to: { name: 'test' }
-        }
-      ]
-    }
-  }
-}
+          to: { name: 'test' },
+        },
+      ],
+    };
+  },
+};
 </script>
