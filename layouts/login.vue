@@ -10,14 +10,10 @@
 </template>
 
 <script>
-import { ValidationProvider } from 'vee-validate';
-import VueHeader from '~/components/VueHeader';
 
 export default {
   name: 'login.vue',
   components: {
-    VueHeader,
-    ValidationProvider,
   },
 };
 </script>
