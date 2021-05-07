@@ -40,6 +40,7 @@ export default {
     return {
       valid: false,
       showPassword: false,
+      // eslint-disable-next-line vue/no-dupe-keys
       hasName: false,
       userInfo: {
         email: '',

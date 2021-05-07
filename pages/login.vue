@@ -56,13 +56,13 @@
 </template>
 
 <script>
-import { ValidationObserver, ValidationProvider } from 'vee-validate';
+// import { ValidationObserver, ValidationProvider } from 'vee-validate';
 
 export default {
   name: 'login.vue',
   components: {
-    ValidationObserver,
-    ValidationProvider,
+    // ValidationObserver,
+    // ValidationProvider,
   },
   layout: 'login',
   props: ['submitForm'],

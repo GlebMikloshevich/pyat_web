@@ -11,31 +11,36 @@ $family-primary: $family-sans-serif;
 $widescreen-enabled: false;
 
 // Set your colors
-$primary: #659DBD;
+//$primary: #659DBD;
+$primary: #38ACEC;
 $primary-invert: #FFFFFF;
+//$info: #3498db;
 $info: #3498db;
 $info-invert: #FFFFFF;
 $blue-button: #1E90FF;
 $blue-button-invert: #FFFFFF;
-
-
+$menu-button: #1589FF;
 //$twitter: #16132E;
 //$twitter-invert: #EFEFEF;
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (
+  "menu_button": ($menu-button, #000),
   //"white": ($white, $black),
   //"black": ($black, $white),
   //"light": ($light, $light-invert),
   //"dark": ($dark, $dark-invert),
   "primary": ($primary, $primary-invert),
-  "info": ($info, $info-invert),
+  "info": ($blue-button, $info-invert),
   "blue-button":($blue-button, $blue-button-invert),
+  //"text1": ($info-invert, $info-invert),
   //"success": ($success, $success-invert),
   //"warning": ($warning, $warning-invert),
   //"danger": ($danger, $danger-invert),
   //"twitter": ($twitter, $twitter-invert)
 );
+
+
 
 // Links
 //$link: $test;
@@ -83,7 +88,7 @@ body {
 .sidebar-config {
   min-height: 100%;
   overflow: hidden;
-  box-shadow: 5px 0px 13px 3px rgba(10, 10, 10, 0.1);
+  box-shadow: 5px 0 13px 3px rgba(10, 10, 10, 0.1);
 }
 
 //.menu-list {
@@ -91,8 +96,12 @@ body {
 //}
 
 .u-menu-item{
-  padding: 2px 0px 2px 8px;
-  margin: 0 0 0px 0;
+  padding: 2px 0 2px 0;
+  margin: 0 0 0 0;
+}
+.u-menu-item:first-child{
+  padding: 0 0 2px 0;
+  margin: 0 0 0 0;
 }
 $sidebar-box-shadow: 0 0 0 0 black;
 

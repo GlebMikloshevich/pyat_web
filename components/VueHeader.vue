@@ -22,14 +22,17 @@
       <div class="navbar-item navbar-end">
         <div v-if="$auth.loggedIn">
           {{ $auth.user.name }}
-          <b-button text>
+          <b-button
+            type="menu_button"
+            text
+          >
             Logout
           </b-button>
         </div>
         <div v-else>
           <b-button
-            class="mr-2"
-            type="is-info"
+            class="mr-2 menu_button"
+            type="is-text"
             tag="nuxt-link"
             size="is-default"
             text
@@ -39,8 +42,8 @@
           </b-button>
 
           <b-button
-            class="mr-4"
-            type="is-info"
+            class="mr-4 "
+            type="is-text"
             tag="nuxt-link"
             size="is-default"
             text

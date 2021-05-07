@@ -2,7 +2,7 @@
   <div class="is-fullheight fullheight">
     <VueHeader />
 
-    <container
+    <div
       class="columns sidebar-layout"
       style="min-height: 120%; margin: 0"
     >
@@ -40,7 +40,7 @@
       >
         <nuxt />
       </div>
-    </container>
+    </div>
   </div>
 </template>
 
