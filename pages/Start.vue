@@ -1,12 +1,14 @@
 <template>
+  <div>
   <!--
   TODO: add background image
   -->
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'start.vue',
+  name: 'Start.vue',
 };
 </script>
 

@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import VueHeader from '@/components/VueHeader';
 
 export default {
   data() {

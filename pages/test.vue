@@ -41,12 +41,9 @@
 </template>
 
 <script>
-import Card from '~/components/Card';
-
 export default {
   name: 'HomePage',
   components: {
-    Card,
   },
   layout: 'old_default',
 };

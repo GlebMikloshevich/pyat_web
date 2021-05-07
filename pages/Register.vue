@@ -95,7 +95,7 @@
 
 <script>
 export default {
-  name: 'register.vue',
+  name: 'Register.vue',
   layout: 'login',
   data() {
     return {
@@ -109,9 +109,9 @@ export default {
     };
   },
   methods: {
-    async registerUser(register_user) {
-      await this.$axios.post('', register_user);
-    },
+    // async registerUser(register_user) {
+    //   await this.$axios.post('', register_user);
+    // },
   },
 };
 

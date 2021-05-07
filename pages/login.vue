@@ -59,7 +59,7 @@
 // import { ValidationObserver, ValidationProvider } from 'vee-validate';
 
 export default {
-  name: 'login.vue',
+  name: 'Login.vue',
   components: {
     // ValidationObserver,
     // ValidationProvider,
